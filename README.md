@@ -1,8 +1,13 @@
 # ES Rally Track Config Builder
 
-To demo check out: [https://talevy.github.io/rallylive/](https://talevy.github.io/rallylive/)
+The esrally track builder is intended to help with the creation of a `track.json`
+file that represents a [Rally Track](https://esrally.readthedocs.io/en/stable/track.html).
 
+Optionally choose a dataset and begin adding operations to benchmark!
+
+To demo check out: [https://talevy.github.io/rallylive/](https://talevy.github.io/rallylive/)
 Only supports ES >= 7.0-beta1
+
 
 ## After exporting
 
