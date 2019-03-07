@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+<head>
+  <meta charset="utf-8">
+  <title>Rally</title>
+  <script type="module" src="index.js" defer></script>
+  <link rel=stylesheet href="eui_theme_light.css">
+  <link rel=stylesheet href="index.css">
+  <link href="data:image/x-icon;base64,YourBase64StringHere" rel="icon" type="image/x-icon" />
+</head>
+<body>
+  <section class="rallybuilder euiPageBody">
+    <header class="header">
+      <h1>Rally Track Builder</h1>
+    </header>
+    <section class="main euiPageContentBody">
+      <button id="trackExport" class="euiButton euiButton--secondary euiButton--fill">Export Track</button>
+      <br></br>
+      <div>
+        <div class="euiFlexGroup">
+          <div class="euiFlexItem">
+            <label class="euiFormLabel">track name</label>
+          </div>
+          <div class="euiFlexItem">
+            <input id="trackName" name="name" type="text" class="euiFieldText" value="my-track"></input>
+          </div>
+        </div>
+        <div class="euiFlexGroup">
+          <div class="euiFlexItem">
+            <label class="euiFormLabel"><p>select dataset to index</p><p>(create-index and bulk to be defined below)</p></label>
+          </div>
+          <div class="euiFlexItem euiFormControlLayout__childrenWrapper">
+            <select id="corpusSelector" name="corpus" class="euiSelect">
+              <option selected value="" disabled hidden style="display:none">&#xA0;</option>
+              <option value="geonames">geonames</option>
+              <option value="geopoint">geopoint</option>
+              <option value="nyc_taxis">nyc_taxis</option>
+              <option value="eventdata">eventdata</option>
+            </select>
+            <div class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"><span class="euiFormControlLayoutCustomIcon"><svg class="euiIcon euiIcon--medium euiFormControlLayoutCustomIcon__icon" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><path id="arrow_down-a" d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.552.552 0 0 0-.771 0 .53.53 0 0 0 0 .759l4.684 4.61c.641.631 1.672.63 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76.552.552 0 0 0-.771 0z"></path></defs><use fill-rule="nonzero" xlink:href="#arrow_down-a"></use></svg></span></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="euiTitle">Ordered operations for benchmarking:</h2>
+      <ul id="operationList"></ul>
+       <div class="addOp">
+          <button id="addOperationBtn" class="euiButton euiButton--primary euiButton--small">Add Operation</button>
+       </div>
+       </section>
+  <footer class="info">
+      <p>Created with ❤ during SPACE!TIME!</p>
+      <br></br>
+      <p>Credit for anything useful goes to the <a href="https://github.com/elastic/eui">EUI team</a> for sharing its styles</p>
+      <p>and the Rally team for building a stellar <a href="https://github.com/elastic/rally">ES benchmarking tool</a></p>
+  </footer>
+</body>
+</html>
